@@ -1,0 +1,145 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.input-form {
+	width: 800px;
+	height: 50px;
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#result-nav {
+	margin: 15px auto;
+}
+#section-result{
+	height : 600px;
+}
+#result-content {
+	margin: 10px auto;
+	height: 600px;
+	text-align: center;
+}
+
+#result-map {
+	float: left;
+	display: inline-block;
+	width: 600px;
+	position: relative;
+	top: 60px;
+	margin: 10px;
+}
+
+#result-houses {
+	float: left;
+	margin-right: -600px;
+}
+
+.dropdown {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.result-form {
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.house {
+	width: 300px;
+	height: 150px;
+	background-color: rgb(243, 243, 243);
+	border-radius: 10px;
+	margin: auto;
+}
+
+.house>table {
+	border-collapse: collapse;
+	width: 300px;
+	text-align: left;
+	font-size: 10px;
+	height: 150px;
+	margin: auto;
+}
+#tableResult{
+	width: 1000px;
+	height: 550px;
+	margin: 10px;
+}
+div#tableResult>table {
+	width: 1000px;
+	margin: 10px;
+}
+
+.select {
+	background-color: #007bff;
+	color: white;
+}
+
+.house img {
+	width: 100px;
+	height: 100px;
+}
+
+.image {
+	text-align: center;
+}
+
+#result-map2 {
+	float: left;
+	display: inline-block;
+	width: 800px;
+	position: relative;
+	top: 60px;
+	margin: 10px;
+}
+
+#result-interest {
+	float: left;
+	position: relative;
+	top: 60px;
+	margin: 10px;
+}
+
+#result-surround {
+	float: left;
+	position: relative;
+	top: 60px;
+	margin: 10px;
+}
+
+.interest-box {
+	width: 300px;
+	height: 100px;
+	margin: auto;
+	text-align: left;
+	font-size: 20px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(235, 235, 235);
+	padding: 20px;
+}
+
+.btn-form {
+	color: skyblue;
+	font-size: 15px;
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+}
+
+div#result-shop {
+	width: 500px;
+	margin: auto;
+}
+
+.option-control{
+	display : inline-block;
+	width : 200px;
+}
+button.btn{
+	margin : 5px;
+}

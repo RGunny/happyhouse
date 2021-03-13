@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.QnAMapper">
+	<insert id="insertQnA" parameterType="QnADto">
+		INSERT INTO qna (btitle, bwriter, bcontent, bwriteDate, breadCnt)
+		VALUES (#{btitle}, #{bwriter},#{bcontent},NOW(),0)
+	</insert>
+	<delete id="deleteQnA" parameterType="int">
+		DELETE FROM qna WHERE bno = #{bno}
+	</delete>
+	<update id="updateQnA" parameterType="QnADto">
+		UPDATE qna SET btitle = #{btitle}, bcontent = #{bcontent}, bwriteDate=NOW()
+		WHERE bno = #{bno}
+	</update>
+	<select id="selectQnANo" resultType="QnADto" parameterType="int">
+		SELECT * FROM qna WHERE bno = #{bno}
+	</select>
+	<select id="selectQnATitle" resultType="QnADto" parameterType="String">
+		SELECT * FROM qna WHERE btitle like #{btitle}
+	</select>
+	<select id="selectQnAWriter" resultType="QnADto" parameterType="String">
+		SELECT * FROM qna WHERE bwriter = #{bwriter}
+	</select>
+	<select id="selectAll" resultType="QnADto">
+		SELECT * FROM qna
+	</select>
+	<select id="detailQnANo" resultType="QnADto" parameterType="int">
+		SELECT * FROM qna WHERE bno = #{bno}
+	</select>
+</mapper>

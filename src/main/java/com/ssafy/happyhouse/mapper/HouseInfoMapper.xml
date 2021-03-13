@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.HouseInfoMapper">
+	<select id="selectHouse" resultType="HouseInfoDto"  parameterType="int">
+	SELECT di.houseId, di.dong, di.aptName , di.dealAmount, di.buildYear, di.jibun, di.area, di.floor, t.typeName
+	FROM (select * from housedeal d join houseinfo i using(aptId)) di join housetype t on di.type = t.typeId
+	WHERE di.houseId = #{houseId};
+	</select>
+	<insert id="pickHouse">
+		INSERT INTO pickhouse (userId, houseId)
+		VALUES (#{userId}, #{houseId})
+	</insert>
+	<select id="selectListPick" resultType="HouseInfoDto" parameterType="String">
+		SELECT di.houseId, di.dong, di.aptName , di.dealAmount, di.jibun
+		FROM (select * from housedeal d join houseinfo i using(aptId))di join pickhouse p using(houseId)
+		WHERE p.userId = #{userId}
+	</select>
+	<delete id="deletePick">
+		DELETE FROM pickhouse WHERE userId = #{userId} and houseId = #{houseId}
+	</delete>
+	<select id="selectBestHouse" resultType="HouseInfoDto">
+		select di.houseId, di.dong, di.aptName , di.dealAmount, di.jibun
+		from (select * from housedeal d join houseinfo i using(aptId))di join pickhouse p using(houseId)
+		group by houseId
+		order by count(*) DESC
+		limit 3
+	</select>
+</mapper>

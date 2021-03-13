@@ -1,0 +1,317 @@
+@charset "UTF-8";
+@font-face { font-family: 'NEXON Lv2 Gothic'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff'); font-weight: normal; font-style: normal; }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+@font-face { font-family: 'Chosunilbo_myungjo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+.font-black{
+	color: black;
+}
+
+#logo{
+padding-bottom: 0;
+max-width: 100%;
+}
+
+#loginSignup > span{
+	margin: 0 5px;
+	float: right;
+}
+.modalSpan{
+	cursor: pointer;
+}
+
+#naviBar{
+	text-align: center;
+	display: block;
+}
+
+#naviBar > li{
+	margin: 0 8%;
+	display: inline-block;
+	font-size: 20px;
+}
+
+
+ /* login modal  */
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fab {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; }
+
+#elegantFormModalInput1{
+	
+	background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.md-form>label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-form label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #757575;
+    cursor: text;
+    transition: transform .2s ease-out,color .2s ease-out,-webkit-transform .2s ease-out;
+    transform: translateY(12px);
+    transform-origin: 0 100%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.md-form .form-control {
+	box-sizing: border-box !important;
+}
+
+.md-form .validate {
+    margin-bottom: 2.5rem;
+}
+
+.md-form .form-control {
+    height: auto;
+    padding: .6rem 0 .4rem 0;
+    margin: 0 0 .5rem 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+#Form-email13{
+	
+	-webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    font: 400 13.3333px Arial;
+}
+
+.input-group{
+	width: 40%;
+	margin: auto;
+}
+
+#searchBar{
+	margin : 6% 0;
+}
+
+#slide{
+	height: 300px;
+	background-color: #58ACFA;
+}
+
+.img-fluid.mx-auto.d-block{
+	width: 600px;
+	height: 274px;
+	opacity: 0.7;
+	filter: alpha(opacity=100);
+}
+
+.aptInfo{
+	position: relative;
+	bottom: 50px;
+	color: #E6E6E6;
+	float: left;
+	margin-left: 100px;
+	font-family: 'Chosunilbo_myungjo';
+	font-weight: 400;
+}
+
+font{
+	font-size: 35px;
+}
+
+.aInfo{
+	margin-left: 25px;
+}
+
+.dropdown{
+	position: relative;
+	box-sizing: border-box;
+}
+
+li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+    list-style:none;
+}
+
+.navbar-nav{
+	direction: ltr;
+}
+
+
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carouselPrograms .carousel-inner .active,
+    .carouselPrograms .carousel-inner .active + .carousel-item,
+    .carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    .carouselPrograms .carousel-inner .carousel-item-next,
+    .carouselPrograms .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+    
+    .carousel-item{
+    	margin-right: 0;
+    }
+    
+    .img-fluid{
+    	max-width: 70%;
+    	margin-top: 10px;
+    }
+    
+    .carousel-control-next, .carousel-control-prev {
+    	width: 5%;
+    }
+    
+#result-map {
+	float: right;
+	display: inline-block;
+	width: 600px;
+	position: relative;
+	margin: 10px;
+}
+
+#mapSearch{
+	margin: 5% 0 0 0;
+}
+
+#mapSearch > div{
+	text-align: left;
+}
+
+#whereMyHouse{
+	display: inline-block;
+	color: #0080FF;
+	font-weight: 700;
+	font-size: 70px;
+	margin-top: 15%;
+	margin-left: 10%;
+}
+
+#viewMap{
+	display: inline-block;
+	color: #848484;
+	font-weight: 400;
+	font-size: 60px;
+	margin-left: 45%;
+}
+
+#findId, #findPw{
+	margin: 100px 40px 0 40px;
+	padding: 150px 50px;
+	text-align: center;
+}
+
+.card-title{
+	font-size: 70px;
+	font-weight: 700;
+}
+
+.noticeBtn{
+	margin: 0 !important;
+	padding: .32rem .75rem;
+}
+
+div.navbar-align.col-2{
+	margin-left:75% !important; 
+}
+
+footer{
+	margin-top: 7%;
+}

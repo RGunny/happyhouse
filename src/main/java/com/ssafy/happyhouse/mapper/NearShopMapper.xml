@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.NearShopMapper">
+
+	<select id="getNearShop" resultType="NearShopDto">
+		SELECT *
+		FROM nearshop
+		WHERE dongName = #{dongName} and largeCateName = #{largeCate}
+<!-- 		WHERE dongName = #{dongName} -->
+	</select>
+	
+	<select id="getNearShopDetail" resultType="NearShopDto">
+		SELECT *
+		FROM nearshop
+		WHERE lat = #{lat} and lng = #{lng} and name = #{name}
+<!-- 		WHERE dongName = #{dongName} -->
+	</select>
+
+
+
+
+</mapper>

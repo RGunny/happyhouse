@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.CoronaMapper">
+	
+	<!-- 안전 병원 -->
+	<select id="getHospital" resultType="HospitalInfoDto">
+		SELECT hospital_name, sido, gugun, dong
+		FROM hospital
+	</select>
+
+	<select id="getHospitalByGugun" resultType="HospitalInfoDto">
+		SELECT hospital_name, sido, gugun, dong
+		FROM hospital
+		WHERE gugun = #{gugun}
+		ORDER BY gugun
+	</select>
+	<select id="getHospitalDetail" resultType="HospitalInfoDto">
+		SELECT hospital_name, sido, gugun, dong, hospital_type, hospital_tel
+		FROM hospital
+		WHERE hospital_name = #{hospital_name}
+	</select>
+	
+	<!--코로나 진료소 -->
+	<select id="getCorona" resultType="CoronaInfoDto">
+		SELECT treatment_available, corona_name, sido, gugun, dong
+		FROM corona
+	</select>
+	
+	<select id="getCoronaByGugun" resultType="CoronaInfoDto" parameterType="String">
+		SELECT treatment_available, corona_name, sido, gugun, dong
+		FROM corona
+		WHERE gugun = #{gugun}
+		ORDER BY gugun
+	</select>
+	<select id="getCoronaDetail" resultType="CoronaInfoDto">
+		SELECT treatment_available, corona_name, sido, gugun, dong, monTofri_time, sat_time, sun_time, corona_tel
+		FROM corona
+		WHERE corona_name = #{corona_name}
+	</select>
+
+</mapper>

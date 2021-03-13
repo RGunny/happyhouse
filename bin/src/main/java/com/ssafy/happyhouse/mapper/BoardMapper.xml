@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.BoardMapper">
+	<select id="selectTotalCount" resultType="int">
+		SELECT count(*) FROM board
+	</select>
+	<select id="selectPage" resultType="BoardDto" parameterType="int">
+		SELECT bNum, bTitle, bWriter, bReadCnt, bWriteDate FROM BOARD 
+		ORDER BY bNum DESC LIMIT #{startRow},#{cnt}
+	</select>
+	<insert id="insertBoard">
+		INSERT INTO BOARD (bTitle, bWriter, bReadCnt, bWriteDate, bContent) VALUES(#{btitle},#{bwriter},#{breadCnt},NOW(),#{bcontent})
+	</insert>
+	<update id="updateReadcnt">
+		UPDATE BOARD SET bReadCnt = bReadCnt+1 WHERE bNum = #{bnum}
+	</update>
+	<select id="selectBoard">
+		SELECT bNum, bTitle, bWriter, bReadCnt, bWriteDate, bContent FROM BOARD WHERE bNum = #{bnum}
+	</select>
+	<select id="selectMContent">
+		SELECT bNum, bTitle, bWriter, bReadCnt, bWriteDate, bContent FROM BOARD WHERE bNum = #{bnum}
+	</select>
+	<update id="modifyBoard">
+		UPDATE BOARD SET bTitle = #{btitle}, bContent = #{bcontent} WHERE bNum = #{bnum}
+	</update>
+	<delete id="delete">
+		DELETE FROM BOARD WHERE bNum = #{bnum}
+	</delete>
+
+</mapper>

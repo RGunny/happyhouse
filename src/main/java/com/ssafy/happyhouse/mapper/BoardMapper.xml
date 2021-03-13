@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.BoardMapper">
+	<select id="selectAll" resultType="BoardDto">
+		SELECT * FROM board
+		ORDER BY bwriteDate DESC
+	</select>
+	<select id="selectBnum" resultType="BoardDto" parameterType="int">
+		SELECT * FROM board
+		WHERE bno = #{bno}
+	</select>
+	<select id="selectBtitle" resultType="BoardDto" parameterType="String">
+		SELECT * FROM board
+		WHERE btitle like #{btitle}
+		ORDER BY bwriteDate DESC
+	</select>
+	<select id="detailBoard" resultType="BoardDto">
+		SELECT * FROM board
+		WHERE bno = #{bno}
+	</select>
+	<update id="updateBoard">
+		UPDATE board SET btitle = #{btitle}, breadCnt = #{breadCnt}, bcontent=#{bcontent}
+		WHERE bno = #{bno}
+	</update>
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM board WHERE bno = #{bno}
+	</delete>
+	<insert id="insertBoard" parameterType="BoardDto">
+		INSERT INTO board (btitle, bwriter, breadCnt, bwriteDate, bcontent)
+		VALUES (#{btitle},'관리자',0,NOW(),#{bcontent})
+	</insert>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.mapper.CoronaMapper">
+
+	<select id="getHospital" resultType="HospitalInfoDto">
+		SELECT hospital_name, sido, gugun, dong, hospital_type, hospital_tel
+		FROM hospital
+	</select>
+
+	<select id="getCorona" resultType="CoronaInfoDto">
+		SELECT treatment_available, corona_name, sido, gugun, dong, monTofri_time, sat_time, sun_time, corona_tel
+		FROM corona
+	</select>
+
+</mapper>
